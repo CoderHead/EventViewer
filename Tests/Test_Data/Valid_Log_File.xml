@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<EventLog>
+    <Event id="0">
+        <Severity>1</Severity>
+        <Source>com.WillisWare.Test.Source</Source>
+        <Timestamp>2020-01-01T00:01:00.000</Timestamp>
+    </Event>
+    <Event id="1">
+        <Severity>1</Severity>
+        <Source>com.WillisWare.Publish.Source</Source>
+        <Timestamp>2020-01-01T00:01:01.000</Timestamp>
+    </Event>
+</EventLog>

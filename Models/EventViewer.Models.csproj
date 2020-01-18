@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <PackOnBuild>true</PackOnBuild>
+    <PackageId>WillisWare.EventViewer.Models</PackageId>
+    <PackageVersion>0.1</PackageVersion>
+    <Authors>WilisWare, LLC</Authors>
+    <Copyright>2020 WillisWare, LLC</Copyright>
+    <Owners>WillisWare, LLC</Owners>
+    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+    <Summary>.NET Standard class library for data and view models.</Summary>
+    <PackageTags>model, event, sample</PackageTags>
+    <Title>EventViewer Models</Title>
+    <Description>.NET Standard class library for data and view models.</Description>
+    <RootNamespace>com.WillisWare.EventViewer.Models</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NuGet.Packaging" Version="5.4.0" />
+    <PackageReference Include="NuGet.Build.Packaging" Version="0.2.2">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Exceptions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove=".DS_Store" />
+  </ItemGroup>
+</Project>
