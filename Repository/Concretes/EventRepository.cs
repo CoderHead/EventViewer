@@ -9,6 +9,7 @@ namespace com.WillisWare.EventViewer.Repository.Concretes
 {
     public sealed class EventRepository : BaseRepository, IRepository<EventLog>
     {
+        /// <inheritdoc/>
         public EventLog LoadFromFile(string filePath)
         {
             ValidateFilePath(filePath);
@@ -24,6 +25,7 @@ namespace com.WillisWare.EventViewer.Repository.Concretes
             }
         }
 
+        /// <inheritdoc/>
         public EventLog LoadFromStream(Stream stream)
         {
             ValidateStream(stream);

@@ -54,5 +54,10 @@ namespace com.WillisWare.EventViewer.Tests.Repository
         {
             Assert.Throws<FileNotFoundException>(() => _repository.LoadFromFile("test.xml"));
         }
+
+        public void LoadFromStream_Throws_ArgumentNulException_With_MissingStream()
+        {
+            Assert.Throws<ArgumentNullException>(() => _repository.LoadFromStream(null));
+        }
     }
 }

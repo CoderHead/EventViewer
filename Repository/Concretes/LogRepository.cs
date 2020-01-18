@@ -6,6 +6,7 @@ namespace com.WillisWare.EventViewer.Repository.Concretes
 {
     public sealed class LogRepository : BaseRepository, IRepository<object>
     {
+        /// <inheritdoc/>
         public object LoadFromFile(string filePath)
         {
             ValidateFilePath(filePath);
@@ -13,8 +14,11 @@ namespace com.WillisWare.EventViewer.Repository.Concretes
             throw new Models.Exceptions.EventFileLoadException();
         }
 
+        /// <inheritdoc/>
         public object LoadFromStream(Stream stream)
         {
+            ValidateStream(stream);
+
             throw new Models.Exceptions.EventStreamLoadException();
         }
     }

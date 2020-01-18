@@ -3,8 +3,17 @@ using System.IO;
 
 namespace com.WillisWare.EventViewer.Repository
 {
-    public class BaseRepository
+    /// <summary>
+    /// Base class for repositories containing utility methods and common members.
+    /// </summary>
+    public abstract class BaseRepository
     {
+        /// <summary>
+        /// Validates the presence and validity of the specified physical file path against the current environment.
+        /// </summary>
+        /// <param name="filePath">A <see cref="string"/> value containing the physical file path to be validated.</param>
+        /// <exception cref="ArgumentNullException">Thrown when the file path is null or empty.</exception>
+        /// <exception cref="FileNotFoundException">Thrown when the file path doesn't represent a valid file.</exception>
         protected void ValidateFilePath(string filePath)
         {
             if (string.IsNullOrEmpty(filePath))
@@ -18,6 +27,12 @@ namespace com.WillisWare.EventViewer.Repository
             }
         }
 
+        /// <summary>
+        /// Validates the presence and validity of the specified <see cref="Stream"/>. If valid, also resets the current position to the beginning of the stream.
+        /// </summary>
+        /// <param name="stream">A <see cref="Stream"/> instance to be validated.</param>
+        /// <exception cref="ArgumentNullException">Thrown when the stream is null or empty.</exception>
+        /// <exception cref="EndOfStreamException">Thrown when the stream cannot be read.</exception>
         protected void ValidateStream(Stream stream)
         {
             if (stream == null || stream.Length == 0)
