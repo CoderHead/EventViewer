@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <PackOnBuild>true</PackOnBuild>
-    <PackageVersion>0.1</PackageVersion>
+    <PackageVersion>0.3</PackageVersion>
     <Authors>WillisWare, LLC</Authors>
     <Copyright>2020 WillisWare, LLC</Copyright>
     <Owners>WillisWare, LLC</Owners>
@@ -14,6 +14,8 @@
     <Description>.NET Standard class library for repository implementation.</Description>
     <PackageId>WillisWare.EventViewer.Repository</PackageId>
     <RootNamespace>com.WillisWare.EventViewer.Repository</RootNamespace>
+    <PackageLicenseUrl>http://willisware.net</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/CoderHead/EventViewer</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,9 +24,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Models\EventViewer.Models.csproj" />
+    <PackageReference Include="WillisWare.EventViewer.Models" Version="0.3.0" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />

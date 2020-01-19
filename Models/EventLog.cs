@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Xml.Serialization;
+using Newtonsoft.Json;
 
 namespace com.WillisWare.EventViewer.Models
 {
@@ -12,10 +13,15 @@ namespace com.WillisWare.EventViewer.Models
     [XmlRoot]
     public sealed class EventLog
     {
+        public EventLog()
+        {
+        }
+
         /// <summary>
         /// Gets or sets the collection of events in the history.
         /// </summary>
-        [XmlArrayItem(ElementName = nameof(Event))]
+        [JsonProperty(PropertyName = "events")]
+        [XmlArrayItem(typeof(Event), ElementName = nameof(Event))]
         public Event[] Events { get; set; } = new Event[] { };
 
         /// <summary>

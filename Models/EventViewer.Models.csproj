@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <PackOnBuild>true</PackOnBuild>
     <PackageId>WillisWare.EventViewer.Models</PackageId>
-    <PackageVersion>0.1</PackageVersion>
+    <PackageVersion>0.3</PackageVersion>
     <Authors>WilisWare, LLC</Authors>
     <Copyright>2020 WillisWare, LLC</Copyright>
     <Owners>WillisWare, LLC</Owners>
@@ -14,6 +14,8 @@
     <Title>EventViewer Models</Title>
     <Description>.NET Standard class library for data and view models.</Description>
     <RootNamespace>com.WillisWare.EventViewer.Models</RootNamespace>
+    <PackageLicenseUrl>http://willisware.net</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/CoderHead/EventViewer</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
@@ -28,6 +30,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Exceptions\" />
+    <Folder Include="Query\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove=".DS_Store" />
